@@ -46,3 +46,7 @@ If you want to use existing Grafana or InfluxDb data you need to do the followin
 
 1. Grafana's url: [http://localhost:3000](http://localhost:3000)
 1. Chronograf's url: [http://localhost:8888](http://localhost:8888)
+
+## Grafana configuration
+
+Use [http://influxdb:8086](http://influxdb:8086) to create InfluxDb datasource.
