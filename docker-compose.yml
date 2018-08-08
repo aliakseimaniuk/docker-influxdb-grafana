@@ -5,7 +5,7 @@ services:
     container_name: influxdb
     volumes:
       # Mount for influxdb data directory
-      - ./influxdb/data:/var/lib/influxdb
+      - ./influxdb/data/:/var/lib/influxdb
       # Mount for influxdb configuration
       - ./influxdb/config/:/etc/influxdb/
     ports:
