@@ -31,9 +31,7 @@ services:
     env_file:
       - "./grafana/env"
     volumes:
-      # Mount for grafana plugins
-      - ./grafana/plugins:/var/lib/grafana/plugins
-      # Persist data
+      # Persist data + plugins
       - ./grafana/data:/var/lib/grafana
     ports:
       - "3000:3000"

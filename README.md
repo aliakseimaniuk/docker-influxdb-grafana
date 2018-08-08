@@ -38,7 +38,7 @@ If you want to use existing Grafana or InfluxDb data you need to do the followin
 #### Grafana
 
 1. Open folder with source code in file explorer.
-1. Create `grafana/data` or `grafana/plugins` folders in the root of the project and copy `data` or `plugins` folder from existing Grafana.
+1. Create `grafana/data` folder in the root of the project and copy `data` folder from existing Grafana.
 
 > See [docker-compose.yml](./docker-compose.yml) for more information.
 
