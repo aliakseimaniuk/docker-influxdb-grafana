@@ -1,0 +1,41 @@
+version: "3"
+services:
+  influxdb:
+    image: influxdb:latest
+    container_name: influxdb
+    volumes:
+      # Mount for influxdb data directory
+      - ./influxdb/data:/var/lib/influxdb
+      # Mount for influxdb configuration
+      - ./influxdb/config/:/etc/influxdb/
+    ports:
+      # The API for InfluxDB is served on port 8086
+      - "8086:8086"
+      - "8082:8082"
+      # UDP Port
+      - "8089:8089"
+
+  chronograf:
+    image: chronograf:latest
+    container_name: chronograf
+    # Use alias from 'links' section to connect to database
+    entrypoint: "chronograf --influxdb-url=http://influxdb:8086"
+    ports:
+      - "8888:8888"
+    links:
+      - influxdb
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    env_file:
+      - "./grafana/env"
+    volumes:
+      # Mount for grafana plugins
+      - ./grafana/plugins:/var/lib/grafana/plugins
+      # Persist data
+      - ./grafana/data:/var/lib/grafana
+    ports:
+      - "3000:3000"
+    links:
+      - influxdb

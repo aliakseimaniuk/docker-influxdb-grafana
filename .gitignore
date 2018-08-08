@@ -1,0 +1,7 @@
+.vscode/
+
+grafana/plugins/
+grafana/data/
+
+influxdb/data/
+influxdb/config/
