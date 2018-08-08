@@ -17,7 +17,7 @@ Docker-compose for InfluxDB and Grafana
 git clone https://github.com/aliakseimaniuk/docker-influxdb-grafana.git
 ```
 
-1. Open folder with download source code in powershell/terminal/cmd
+1. Open folder with downloaded source code in powershell/terminal/cmd
 1. Run the following command
 
 ``` powershell
