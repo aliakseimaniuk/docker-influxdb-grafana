@@ -31,7 +31,7 @@ services:
     image: grafana/grafana:latest
     container_name: grafana
     env_file:
-      - "./grafana/env"
+      - ./grafana/env
     volumes:
       # Persist data + plugins
       - ./grafana/data:/var/lib/grafana
