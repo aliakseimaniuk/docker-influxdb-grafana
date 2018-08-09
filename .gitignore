@@ -1,6 +1,4 @@
 .vscode/
 
 grafana/data/
-
 influxdb/data/
-influxdb/config/
