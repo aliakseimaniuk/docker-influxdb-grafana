@@ -2,3 +2,4 @@
 
 grafana/data/
 influxdb/data/
+chronograf/data/

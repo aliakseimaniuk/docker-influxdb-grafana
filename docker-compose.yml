@@ -20,6 +20,9 @@ services:
     container_name: chronograf
     # Use alias from 'links' section to connect to database
     entrypoint: "chronograf --influxdb-url=http://influxdb:8086"
+    volumes:
+      # Mount for chronograf database
+      - ./chronograf/data/:/var/lib/chronograf/
     ports:
       - "8888:8888"
     depends_on:
