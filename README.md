@@ -50,3 +50,10 @@ If you want to use existing Grafana or InfluxDb data you need to do the followin
 ## Grafana configuration
 
 Use [http://influxdb:8086](http://influxdb:8086) to create InfluxDb datasource.
+
+## Troubleshooting
+
+In case you need to make calls to InfluxDb from Grafana plugin from JavaScript, you need to make `http://influxdb:8086` available from your host machine. To do that add the following line into [hosts](https://en.wikipedia.org/wiki/Hosts_(file)) file.
+``` bash
+127.0.0.1 influxdb
+```
